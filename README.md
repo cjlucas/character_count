@@ -1,21 +1,20 @@
-# CharacterCount
+# Character Count
 
-**TODO: Add description**
+Although Elixir is not an ideal choice for a CLI app, I chose it because I thought utilizing pattern matching along with the nice streaming API would lead to a clean solution without the need for a lot of control flow.
 
-## Installation
+## Usage
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `character_count` to your list of dependencies in `mix.exs`:
+```
+Usage: mix run counter.exs <options> <infile>
 
-```elixir
-def deps do
-  [
-    {:character_count, "~> 0.1.0"}
-  ]
-end
+Options:
+--line - Get line count
+--word - Get word count
+--character - Get character count
+--all - Get all of the above counts
+--report <outfile> - Write report of counts to a file
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/character_count](https://hexdocs.pm/character_count).
+## Tests
 
+This program was tested for consistency with `wc`.
